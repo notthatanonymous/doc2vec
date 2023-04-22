@@ -49,7 +49,7 @@ class doc2VecModel(Model):
         logging.info("Training Doc2Vec model")
         # 10 epochs take around 10 minutes on my machine (i7),
         #  if you have more time/computational power make it 20
-        for epoch in range(10):
+        for epoch in range(3):
             logging.info('Training iteration #{0}'.format(epoch))
             self.model.train(
                 self.corpus, total_examples=self.model.corpus_count,
