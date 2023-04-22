@@ -7,7 +7,6 @@ import inspect
 
 import numpy as np
 from gensim.models import doc2vec
-from gensim.models.deprecated.doc2vec import LabeledSentence
 
 
 logging.basicConfig(
@@ -88,5 +87,5 @@ class doc2VecModel(Model):
         labeled = []
         for i, v in enumerate(corpus):
             label = label_type + '_' + str(i)
-            labeled.append(LabeledSentence(v.split(), [label]))
+            labeled.append(doc2vec.TaggedDocument(v.split(), [label]))
         return labeled
