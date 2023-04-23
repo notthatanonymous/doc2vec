@@ -1,4 +1,4 @@
-pandas
-gensim
-numpy
-scikit_learn
+pandas==1.1.5
+gensim==4.2.0
+numpy==1.21.6
+scikit_learn==1.0.2
