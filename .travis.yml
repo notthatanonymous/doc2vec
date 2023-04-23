@@ -16,7 +16,7 @@ jobs:
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
 install:
   - if os != windows; then
-      sudo rm -f /etc/boto.cfg
+      sudo rm -f /etc/boto.cfg;
     fi
   - pip install -r requirements.txt
 script:
