@@ -15,7 +15,8 @@ jobs:
         - python -m pip install --upgrade pip
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
 install:
-  - sudo rm -f /etc/boto.cfg
+  - if os != windows; then
+    sudo rm -f /etc/boto.cfg
   - pip install -r requirements.txt
 script:
   - python3 text_classifier.py || python text_classifier.py
