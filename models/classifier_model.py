@@ -76,7 +76,7 @@ class classifierModel(Model):
                     average='weighted')))
         print(f"\n\n\nScore: {f1_score(
                     testing_labels, testing_predictions,
-                    average='weighted')}\n\n\n"
+                    average='weighted')}\n\n\n")
 
     def predict(self, d2v, testing_vectors):
         logging.info("Classifier Predicting")
